@@ -1,0 +1,11 @@
+C:\Users\sarit\source\repos\TemperatureSensorConsoleApp\TemperatureSensorConsoleApp\bin\Debug\netcoreapp3.1\TemperatureSensorConsoleApp.exe
+C:\Users\sarit\source\repos\TemperatureSensorConsoleApp\TemperatureSensorConsoleApp\bin\Debug\netcoreapp3.1\TemperatureSensorConsoleApp.deps.json
+C:\Users\sarit\source\repos\TemperatureSensorConsoleApp\TemperatureSensorConsoleApp\bin\Debug\netcoreapp3.1\TemperatureSensorConsoleApp.runtimeconfig.json
+C:\Users\sarit\source\repos\TemperatureSensorConsoleApp\TemperatureSensorConsoleApp\bin\Debug\netcoreapp3.1\TemperatureSensorConsoleApp.runtimeconfig.dev.json
+C:\Users\sarit\source\repos\TemperatureSensorConsoleApp\TemperatureSensorConsoleApp\bin\Debug\netcoreapp3.1\TemperatureSensorConsoleApp.dll
+C:\Users\sarit\source\repos\TemperatureSensorConsoleApp\TemperatureSensorConsoleApp\bin\Debug\netcoreapp3.1\TemperatureSensorConsoleApp.pdb
+C:\Users\sarit\source\repos\TemperatureSensorConsoleApp\TemperatureSensorConsoleApp\obj\Debug\netcoreapp3.1\TemperatureSensorConsoleApp.csprojAssemblyReference.cache
+C:\Users\sarit\source\repos\TemperatureSensorConsoleApp\TemperatureSensorConsoleApp\obj\Debug\netcoreapp3.1\TemperatureSensorConsoleApp.AssemblyInfoInputs.cache
+C:\Users\sarit\source\repos\TemperatureSensorConsoleApp\TemperatureSensorConsoleApp\obj\Debug\netcoreapp3.1\TemperatureSensorConsoleApp.AssemblyInfo.cs
+C:\Users\sarit\source\repos\TemperatureSensorConsoleApp\TemperatureSensorConsoleApp\obj\Debug\netcoreapp3.1\TemperatureSensorConsoleApp.dll
+C:\Users\sarit\source\repos\TemperatureSensorConsoleApp\TemperatureSensorConsoleApp\obj\Debug\netcoreapp3.1\TemperatureSensorConsoleApp.pdb
