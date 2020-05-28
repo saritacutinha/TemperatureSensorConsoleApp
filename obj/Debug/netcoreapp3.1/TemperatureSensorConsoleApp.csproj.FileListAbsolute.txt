@@ -9,3 +9,7 @@ C:\Users\sarit\source\repos\TemperatureSensorConsoleApp\TemperatureSensorConsole
 C:\Users\sarit\source\repos\TemperatureSensorConsoleApp\TemperatureSensorConsoleApp\obj\Debug\netcoreapp3.1\TemperatureSensorConsoleApp.AssemblyInfo.cs
 C:\Users\sarit\source\repos\TemperatureSensorConsoleApp\TemperatureSensorConsoleApp\obj\Debug\netcoreapp3.1\TemperatureSensorConsoleApp.dll
 C:\Users\sarit\source\repos\TemperatureSensorConsoleApp\TemperatureSensorConsoleApp\obj\Debug\netcoreapp3.1\TemperatureSensorConsoleApp.pdb
+C:\Users\sarit\source\repos\TemperatureSensorConsoleApp\TemperatureSensorConsoleApp\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+C:\Users\sarit\source\repos\TemperatureSensorConsoleApp\TemperatureSensorConsoleApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\sarit\source\repos\TemperatureSensorConsoleApp\TemperatureSensorConsoleApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\sarit\source\repos\TemperatureSensorConsoleApp\TemperatureSensorConsoleApp\obj\Debug\netcoreapp3.1\TemperatureSensorConsoleApp.csproj.CopyComplete
