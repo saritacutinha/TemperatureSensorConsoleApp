@@ -10,56 +10,55 @@ namespace TemperatureSensorConsoleApp
 {
     public class Program
     {
-        //static Random random = new Random();
+        
         private static readonly string[] Summaries = new[]
         {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+            "Freezing",  "Chilly", "Cool", "Mild", "Warm",  "Hot",  "Scorching"
         };
 
-        public static async Task Main(string[] args)
+        public static void Main(string[] args)
         {
+            /*Setting the timer for every minute
+             * creating http client 
+             * creating data to be posted */
 
-
-            //Timer timer = new Timer();
-            //timer.Elapsed += Timer_Elapsed;
-            //timer.Start();
-            //Console.ReadKey();
-            //timer.Stop();
+            Timer timer = new Timer(60000);
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://localhost:58397");
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+              
             var rng = new Random();
-            var temperature = new Temperature() { Date = DateTime.Now, TemperatureC = rng.Next(-4, 50), Summary = Summaries[rng.Next(Summaries.Length)] };
-            await PostTemperatureData(temperature);
+            var temperature = new Temperature() { Date = DateTime.Now, TemperatureC = rng.Next(-4, 50), Summary = Summaries[rng.Next(Summaries.Length)] };       
+            timer.Elapsed += (sender, e) => Timer_Elapsed(sender, e, client, temperature);
+            timer.Start();
+            Console.ReadKey();
+            timer.Stop();
         }
 
-        private static async Task PostTemperatureData(Temperature temperature)
+        private static void Timer_Elapsed(object sender, ElapsedEventArgs e, HttpClient client,Temperature temperature)
         {
-            using (var client = new HttpClient())
-            {
-                client.BaseAddress = new Uri("http://localhost:58397");
-                client.DefaultRequestHeaders.Accept.Clear();
-                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                HttpResponseMessage response = await client.PostAsJsonAsync("/Temperature", temperature);
-                if (response.IsSuccessStatusCode)
-                {
-                    // Get the URI of the created resource.  
-                    Uri returnUrl = response.Headers.Location;
-                    Console.WriteLine(returnUrl);
-                }
+            /* On timer elapsed post data to WebApi */
+            Console.WriteLine("Sending Temperature Data:\n" +
+                "Date:"+temperature.Date+
+                "\tTemperature in Fahrenhight"+temperature.TemperatureF+
+                "\tTemperature in Celsius"+ temperature.TemperatureC+
+                "\tSummary:"+temperature.Summary);
+            PostTemperatureData(client, temperature).Wait();
+        }
+
+        private static async Task PostTemperatureData(HttpClient client,Temperature temperature)
+        {
+              HttpResponseMessage response = await client.PostAsJsonAsync("/Temperature", temperature);
+              if (response.IsSuccessStatusCode)
+               { 
+                    Console.WriteLine(response.StatusCode);
+               }
                 else
                     Console.WriteLine("Internal Server Error");
-
-            }
         }
     }
-
-
-
-
-    //private static void Timer_Elapsed(object sender, ElapsedEventArgs e)
-    //{
-    //    var currentTemperature = random.Next(-4, 45);
-    //    Console.WriteLine("DateTime :"+DateTime.Now +"\tTemperature :"+currentTemperature );
-    //}
-
+    
     public class Temperature
     {
         public DateTime Date { get; set; }
